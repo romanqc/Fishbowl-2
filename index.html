@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persons, Gifts & the Living World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg-orb bg-orb--1"></div>
+  <div class="bg-orb bg-orb--2"></div>
+  <div class="bg-orb bg-orb--3"></div>
+  <div class="grain"></div>
+
+  <div class="slides-wrapper" id="slidesWrapper">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 1 · TITLE                                         -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide slide--title active" data-index="0">
+      <div class="slide__inner">
+        <div class="title-eyebrow">Reading Notes — Anthropology</div>
+        <h1 class="title-main">Persons, Gifts<br/>&amp; the Living World</h1>
+        <div class="title-rule"></div>
+        <p class="title-sub">Indigenous Cosmologies &amp; Human-Animal Relations</p>
+        <div class="title-sources">
+          <span>Sidney · Hallowell · Nelson · Smith · Fienup-Riordan</span>
+        </div>
+
+        <!-- ECOLOGICAL CALENDAR SVG -->
+        <div class="title-emblem">
+          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Outermost ring: seasonal arcs (4 quadrants) -->
+            <g class="cal-ring cal-ring--4">
+              <path d="M80 10 A70 70 0 0 1 150 80" stroke="var(--ochre)" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+              <path d="M150 80 A70 70 0 0 1 80 150" stroke="var(--ochre)" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+              <path d="M80 150 A70 70 0 0 1 10 80" stroke="var(--ochre)" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+              <path d="M10 80 A70 70 0 0 1 80 10" stroke="var(--ochre)" stroke-width="1.2" stroke-linecap="round" opacity="0.75"/>
+            </g>
+
+            <!-- Second ring: lunar arcs (8 segments) -->
+            <g class="cal-ring cal-ring--3">
+              <path d="M80 22 A58 58 0 0 1 138 80" stroke="var(--ochre)" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
+              <path d="M138 80 A58 58 0 0 1 80 138" stroke="var(--ochre)" stroke-width="0.9" stroke-linecap="round" opacity="0.45"/>
+              <path d="M80 138 A58 58 0 0 1 22 80" stroke="var(--ochre)" stroke-width="0.9" stroke-linecap="round" opacity="0.3"/>
+              <path d="M22 80 A58 58 0 0 1 80 22" stroke="var(--ochre)" stroke-width="0.9" stroke-linecap="round" opacity="0.55"/>
+              <path d="M121.1 38.9 A58 58 0 0 1 121.1 121.1" stroke="var(--ochre)" stroke-width="0.5" stroke-linecap="round" opacity="0.25"/>
+              <path d="M38.9 121.1 A58 58 0 0 1 38.9 38.9" stroke="var(--ochre)" stroke-width="0.5" stroke-linecap="round" opacity="0.2"/>
+            </g>
+
+            <!-- Third ring: migration arcs -->
+            <g class="cal-ring cal-ring--2">
+              <path d="M80 36 A44 44 0 0 1 124 80" stroke="var(--ochre-lt)" stroke-width="0.7" stroke-linecap="round" opacity="0.5"/>
+              <path d="M124 80 A44 44 0 0 1 80 124" stroke="var(--ochre-lt)" stroke-width="0.7" stroke-linecap="round" opacity="0.3"/>
+              <path d="M80 124 A44 44 0 0 1 36 80" stroke="var(--ochre-lt)" stroke-width="0.7" stroke-linecap="round" opacity="0.2"/>
+              <path d="M36 80 A44 44 0 0 1 80 36" stroke="var(--ochre-lt)" stroke-width="0.7" stroke-linecap="round" opacity="0.4"/>
+            </g>
+
+            <!-- Radial spokes -->
+            <line x1="80" y1="80" x2="80" y2="12" stroke="var(--ochre)" stroke-width="0.6" opacity="0.35"/>
+            <line x1="80" y1="80" x2="148" y2="80" stroke="var(--ochre)" stroke-width="0.6" opacity="0.22"/>
+            <line x1="80" y1="80" x2="80" y2="148" stroke="var(--ochre)" stroke-width="0.6" opacity="0.18"/>
+            <line x1="80" y1="80" x2="12" y2="80" stroke="var(--ochre)" stroke-width="0.6" opacity="0.28"/>
+            <line x1="80" y1="80" x2="129.5" y2="30.5" stroke="var(--ochre)" stroke-width="0.4" opacity="0.2"/>
+            <line x1="80" y1="80" x2="129.5" y2="129.5" stroke="var(--ochre)" stroke-width="0.4" opacity="0.15"/>
+            <line x1="80" y1="80" x2="30.5" y2="129.5" stroke="var(--ochre)" stroke-width="0.4" opacity="0.12"/>
+            <line x1="80" y1="80" x2="30.5" y2="30.5" stroke="var(--ochre)" stroke-width="0.4" opacity="0.18"/>
+
+            <!-- Tick marks on outer ring -->
+            <g opacity="0.5">
+              <line x1="80" y1="10" x2="80" y2="16" stroke="var(--ochre)" stroke-width="1"/>
+              <line x1="150" y1="80" x2="144" y2="80" stroke="var(--ochre)" stroke-width="1"/>
+              <line x1="80" y1="150" x2="80" y2="144" stroke="var(--ochre)" stroke-width="1"/>
+              <line x1="10" y1="80" x2="16" y2="80" stroke="var(--ochre)" stroke-width="1"/>
+            </g>
+            <g opacity="0.28">
+              <line x1="129.5" y1="30.5" x2="125.3" y2="34.7" stroke="var(--ochre)" stroke-width="0.7"/>
+              <line x1="129.5" y1="129.5" x2="125.3" y2="125.3" stroke="var(--ochre)" stroke-width="0.7"/>
+              <line x1="30.5" y1="129.5" x2="34.7" y2="125.3" stroke="var(--ochre)" stroke-width="0.7"/>
+              <line x1="30.5" y1="30.5" x2="34.7" y2="34.7" stroke="var(--ochre)" stroke-width="0.7"/>
+            </g>
+
+            <!-- Season labels -->
+            <text x="80" y="8" text-anchor="middle" font-size="4.5" fill="var(--ochre)" opacity="0.55" font-family="'Jost', sans-serif" letter-spacing="0.08em">WINTER</text>
+            <text x="153" y="82" text-anchor="start" font-size="4.5" fill="var(--ochre)" opacity="0.4" font-family="'Jost', sans-serif" letter-spacing="0.08em">SPRING</text>
+            <text x="80" y="158" text-anchor="middle" font-size="4.5" fill="var(--ochre)" opacity="0.35" font-family="'Jost', sans-serif" letter-spacing="0.08em">SUMMER</text>
+            <text x="7" y="82" text-anchor="end" font-size="4.5" fill="var(--ochre)" opacity="0.45" font-family="'Jost', sans-serif" letter-spacing="0.08em">FALL</text>
+
+            <!-- Hub -->
+            <circle cx="80" cy="80" r="10" fill="none" stroke="var(--ochre)" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="80" cy="80" r="5" fill="var(--ochre)" opacity="0.75"/>
+            <circle cx="80" cy="80" r="2" fill="var(--bg)" opacity="0.9"/>
+
+          </svg>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 2 · GROUP MEMBER 1: FIENUP-RIORDAN + SIDNEY      -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide" data-index="1">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">01</div>
+          <div class="slide-tag">Group Member 1</div>
+          <div class="slide-readers">Fienup-Riordan 2000 &nbsp;·&nbsp; Sidney 1990</div>
+        </div>
+        <h2 class="slide-title">The Animal as Host, the Story as Wealth</h2>
+        <div class="slide-body two-col">
+          <div class="slide-text">
+            <p class="slide-lead">Both texts center on what animals <em>give</em> — and what it means to receive that gift with the full weight of obligation.</p>
+            <ul class="slide-bullets">
+              <li><strong>Fienup-Riordan:</strong> Yup'ik seals are not prey — they are <em>hosts</em>. The seal chooses to be taken; its <em>yua</em> (person-essence) is returned through the Bladder Festival, renewing the cycle</li>
+              <li><strong>Fienup-Riordan:</strong> "The Boy Who Went to Live with the Seals" — crossing into the animal's world reveals their village, their personhood, their perspective on humans</li>
+              <li><strong>Sidney:</strong> <span class="quote-inline">"I have no money to leave my grandchildren. My stories are my wealth"</span> — wealth here originates from animals who gave their stories in Distant Time</li>
+              <li><strong>Sidney:</strong> "Moldy Head" and "The Old Woman under the World" carry accumulated power — these are not folktales but living transmissions</li>
+            </ul>
+          </div>
+          <div class="slide-visual">
+            <div class="image-frame">
+              <div class="image-placeholder">
+                <span class="img-label"></span>
+                <span class="img-caption">Seal as person / host<br/><em>replace with your art</em></span>
+              </div>
+            </div>
+            <div class="source-chip">Fienup-Riordan 2000 · Sidney 1990</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 3 · GROUP MEMBER 2: HALLOWELL + NELSON           -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide" data-index="2">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">02</div>
+          <div class="slide-tag">Group Member 2</div>
+          <div class="slide-readers">Hallowell 1960 &nbsp;·&nbsp; Nelson 1983</div>
+        </div>
+        <h2 class="slide-title">World View &amp; the Relational Cosmos</h2>
+        <div class="slide-body two-col">
+          <div class="slide-visual slide-visual--left">
+            <div class="image-frame">
+              <div class="image-placeholder">
+                <span class="img-label"></span>
+                <span class="img-caption">Relational web / world view<br/><em>replace with your art</em></span>
+              </div>
+            </div>
+            <div class="source-chip">Hallowell 1960 · Nelson 1983</div>
+          </div>
+          <div class="slide-text">
+            <p class="slide-lead">Hallowell's argument: Ojibwa <em>world view</em> is not metaphor layered onto reality — it is the operative framework through which a relational cosmos is lived. Nelson shows the same structure in action.</p>
+            <ul class="slide-bullets">
+              <li><strong>Hallowell:</strong> Elder on stones — <span class="quote-inline">"No! But <em>some</em> are [alive]"</span> — personhood is contextual, relational, never categorical; the cosmos is populated by persons human <em>and</em> other-than-human</li>
+              <li><strong>Hallowell:</strong> Behavior toward persons — restraint, reciprocity, address — is not custom but <em>cosmic maintenance</em>; disrespect unravels the web</li>
+              <li><strong>Nelson:</strong> Koyukon "luck" is relational standing — what animal persons allow when conduct has honored the relationship</li>
+              <li><strong>Nelson:</strong> <span class="quote-inline">"The world is ever aware"</span> — the world attends to how it is treated; every act is witnessed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 4 · YOUR READINGS: SMITH + MAKE PRAYERS          -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide" data-index="3">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">03</div>
+          <div class="slide-tag">Your Readings</div>
+          <div class="slide-readers">Smith 2002 &nbsp;·&nbsp; Make Prayers to the Raven (film)</div>
+        </div>
+        <h2 class="slide-title">Flesh, Word &amp; Inkonze</h2>
+        <div class="slide-body two-col">
+          <div class="slide-text">
+            <p class="slide-lead">Smith's Chipewyan analysis — and the film that lives alongside it — show the full scope of what animals give: not just flesh, but sacred knowledge and language itself.</p>
+            <ul class="slide-bullets">
+              <li><strong>Smith:</strong> Animals give humans <em>inkonze</em> — sacred power, knowledge, the capacity to know and act in the world. The flesh feeds the body; the word feeds the cosmos</li>
+              <li><strong>Smith:</strong> Chipewyan elder: <span class="quote-inline">"It's the animals that give inkonze to the Indians. Animals are always the best medicine people"</span></li>
+              <li><strong>Smith:</strong> A Maussian gift logic — the animal's donation creates an ongoing debt that structures all human–animal relations across time</li>
+              <li><strong>Make Prayers to the Raven:</strong> Nelson's Koyukon ethic made visible — the film shows the daily texture of a world treated as alive, aware, and owed respect</li>
+              <li>Together: the gift moves through <em>three registers</em> — body (flesh), mind (knowledge), and world (story/language)</li>
+            </ul>
+          </div>
+          <div class="slide-visual">
+            <div class="image-frame">
+              <div class="image-placeholder">
+                <span class="img-label"></span>
+                <span class="img-caption">Raven / inkonze / the word<br/><em>replace with your art</em></span>
+              </div>
+            </div>
+            <div class="source-chip">Smith 2002 · Make Prayers to the Raven</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 5 · CONVERGENCE 1: THE GIFT CYCLE                -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide" data-index="4">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">04</div>
+          <div class="slide-tag">Convergence</div>
+        </div>
+        <h2 class="slide-title">Where All Three Pairs Meet: The Gift</h2>
+        <div class="slide-body convergence-grid">
+
+          <div class="conv-col">
+            <div class="conv-label">Fienup-Riordan + Sidney</div>
+            <div class="conv-theme">Animal as Host</div>
+            <p>The seal offers itself; the elder passes on stories received from animals in Distant Time. The gift flows from animal to human — and back, through ceremony and telling.</p>
+          </div>
+
+          <div class="conv-arrow">
+            <svg viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 10 Q50 40 30 60 Q10 80 30 110" stroke="var(--ochre)" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5"/>
+              <circle cx="30" cy="60" r="3" fill="var(--ochre)" opacity="0.6"/>
+            </svg>
+          </div>
+
+          <div class="conv-col">
+            <div class="conv-label">Hallowell + Nelson</div>
+            <div class="conv-theme">Relational Obligation</div>
+            <p>The gift creates a web of obligation — the cosmos is sustained by persons behaving correctly toward one another. Luck is earned relational standing.</p>
+          </div>
+
+          <div class="conv-arrow">
+            <svg viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 10 Q50 40 30 60 Q10 80 30 110" stroke="var(--ochre)" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5"/>
+              <circle cx="30" cy="60" r="3" fill="var(--ochre)" opacity="0.6"/>
+            </svg>
+          </div>
+
+          <div class="conv-col">
+            <div class="conv-label">Smith + Make Prayers</div>
+            <div class="conv-theme">Inkonze: The Full Gift</div>
+            <p>Animals give three things: flesh (body), inkonze (sacred knowledge), and stories/language (world). The debt is total — the gift saturates all three registers of human life.</p>
+          </div>
+
+          <div class="conv-synthesis">
+            <div class="synth-label">Shared logic across all five texts</div>
+            <p>Animals are primary givers → humans receive with obligation → ceremony, story, and right conduct return the gift → the cycle renews</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 6 · CONVERGENCE 2: NARRATIVE & ANTI-DUALISM      -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide" data-index="5">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">05</div>
+          <div class="slide-tag">Convergence</div>
+        </div>
+        <h2 class="slide-title">Stories Are Not Representations</h2>
+        <div class="slide-body two-col">
+          <div class="slide-visual slide-visual--left">
+            <div class="image-frame">
+              <div class="image-placeholder">
+                <span class="img-label"></span>
+                <span class="img-caption">Elder / narrative transmission<br/><em>replace with your art</em></span>
+              </div>
+            </div>
+            <div class="source-chip">Sidney · Smith · Nelson · Hallowell</div>
+          </div>
+          <div class="slide-text">
+            <p class="slide-lead">Across all three reading pairs: stories don't <em>describe</em> the world — they <em>are</em> the world, carrying power that renews relations and keeps the cosmos intact.</p>
+            <ul class="slide-bullets">
+              <li><strong>Sidney:</strong> "Moldy Head" carries accumulated power — to tell it is to activate energy received from animals in Distant Time</li>
+              <li><strong>Hallowell:</strong> Shape-shifting is possible because the <em>person-within</em> is not the outward form — stories about transformation are ontological statements, not fantasy</li>
+              <li><strong>Nelson / Make Prayers:</strong> Koyukon oral knowledge constitutes a <em>science of relations</em> — how to speak to, about, and after animals</li>
+              <li><strong>Smith:</strong> The word (inkonze) travels from animal to human to future generations — the story extends the original gift forward through time</li>
+              <li>Anti-dualist thread: no body/soul split, no nature/culture wall — the same person can wear many forms; stories hold that truth in place</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 7 · SYNTHESIS                                     -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide slide--synthesis" data-index="6">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">06</div>
+          <div class="slide-tag">Synthesis</div>
+        </div>
+        <h2 class="slide-title">Four Threads Across All Five Texts</h2>
+        <div class="slide-body four-grid">
+          <div class="theme-card">
+            <div class="theme-icon">⬡</div>
+            <h3>Relational Personhood</h3>
+            <p>Identity is not individual but emergent from webs of obligation — between kin, animals, cosmos. Personhood is a relational achievement, not a given.</p>
+            <div class="theme-sources">Hallowell · Nelson · Fienup-Riordan</div>
+          </div>
+          <div class="theme-card">
+            <div class="theme-icon">⟳</div>
+            <h3>Cosmic Gift Cycle</h3>
+            <p>Animals give flesh, knowledge, and stories → humans honor through ceremony, restraint, and telling → animals give again. The cycle is the cosmos.</p>
+            <div class="theme-sources">Smith · Sidney · Fienup-Riordan</div>
+          </div>
+          <div class="theme-card">
+            <div class="theme-icon">◈</div>
+            <h3>Anti-Dualism</h3>
+            <p>No body/soul split. No nature/culture wall. No sacred/secular divide. Person, animal, story, and world are one fabric — difference is form, not kind.</p>
+            <div class="theme-sources">All five texts</div>
+          </div>
+          <div class="theme-card">
+            <div class="theme-icon">⟡</div>
+            <h3>Narrative as Power</h3>
+            <p>Stories carry inkonze — they sustain relationships, transmit the animal's original gift, and remake the world in the telling. To tell wrongly is to do harm.</p>
+            <div class="theme-sources">Sidney · Smith · Nelson</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SLIDE 8 · COMIC ARC                                     -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="slide slide--comic" data-index="7">
+      <div class="slide__inner slide__inner--content">
+        <div class="slide-header">
+          <div class="slide-num">07</div>
+          <div class="slide-tag">For Your Comic</div>
+        </div>
+        <h2 class="slide-title">8 Panels — A Story Arc</h2>
+        <!-- <div class="slide-body comic-grid">
+          <div class="panel-card"><span class="panel-num">1</span><p><strong>World-before:</strong> animals and humans speak the same language — Distant Time (Sidney · Nelson)</p></div>
+          <div class="panel-card"><span class="panel-num">2</span><p><strong>The Host:</strong> a seal chooses to be taken — a conscious, deliberate act of giving (Fienup-Riordan)</p></div>
+          <div class="panel-card"><span class="panel-num">3</span><p><strong>The Gift Received:</strong> hunter takes with care — right words, right handling of bones, no boasting (Nelson · Hallowell)</p></div>
+          <div class="panel-card"><span class="panel-num">4</span><p><strong>Inkonze:</strong> animal appears in dream or vision, transmits knowledge — flesh was only the first gift (Smith)</p></div>
+          <div class="panel-card"><span class="panel-num">5</span><p><strong>The Elder Tells:</strong> the story travels forward — the animal's voice inside the human voice (Sidney)</p></div>
+          <div class="panel-card"><span class="panel-num">6</span><p><strong>Crossing Over:</strong> a figure enters the animal's world — sees with their eyes, learns their perspective (Fienup-Riordan)</p></div>
+          <div class="panel-card"><span class="panel-num">7</span><p><strong>The Ceremony:</strong> bladder returned to water — souls renewed, the web of obligation restored (Fienup-Riordan · Hallowell)</p></div>
+          <div class="panel-card"><span class="panel-num">8</span><p><strong>World-after:</strong> the web holds — <em>"The world is ever aware"</em> (Nelson)</p></div>
+        </div> -->
+      </div>
+    </div>
+
+  </div><!-- /slides-wrapper -->
+
+  <!-- NAVIGATION -->
+  <nav class="slide-nav">
+    <button class="nav-btn nav-btn--prev" id="prevBtn" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav-dots" id="navDots"></div>
+    <button class="nav-btn nav-btn--next" id="nextBtn" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none"><polyline points="9 6 15 12 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+
+  <div class="slide-counter" id="slideCounter">1 / 8</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
