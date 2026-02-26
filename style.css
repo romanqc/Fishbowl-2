@@ -337,6 +337,35 @@ html, body {
 /* To add an actual image, replace .image-placeholder with: */
 /* <img src="your-image.png" style="width:100%;height:100%;object-fit:cover;" /> */
 
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --- IMAGE CITATION --------------------------------------- */
+.image-citation {
+  margin-top: 0.6rem;
+  font-size: 0.62rem;
+  color: var(--cream-dim);
+  opacity: 0.65;
+  line-height: 1.65;
+}
+
+.ic-artist {
+  color: var(--cream);
+  opacity: 0.85;
+}
+
+.ic-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--cream);
+  opacity: 0.85;
+}
+
 .source-chip {
   margin-top: 0.75rem;
   font-size: 0.6rem;
