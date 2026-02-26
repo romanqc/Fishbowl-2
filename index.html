@@ -99,15 +99,26 @@
             </div>
             <div class="discussion-box">
               <div class="disc-label">For discussion</div>
-              <p>If the animal chooses to give itself, what does that do to the category of "hunting"? And if stories are wealth, who decides when that wealth has been properly received?</p>
+              <p>If the animal <em>chooses</em> to give itself, what does that do to the category of "hunting"? And if stories are wealth — who decides when that wealth has been properly received?</p>
             </div>
           </div>
           <div class="slide-visual">
-            <div class="image-frame">
-              <div class="image-placeholder">
-
+            <!-- 2×2 thumbnail grid — click any to open lightbox -->
+            <div class="thumb-grid" id="thumbGrid">
+              <div class="thumb" data-index="0">
+                <img src="images/image1.png" alt="Image 1" />
+              </div>
+              <div class="thumb" data-index="1">
+                <img src="images/image2.png" alt="Image 2" />
+              </div>
+              <div class="thumb" data-index="2">
+                <img src="images/image3.jpeg" alt="Image 3" />
+              </div>
+              <div class="thumb" data-index="3">
+                <img src="images/image4.jpeg" alt="Image 4" />
               </div>
             </div>
+            <div class="thumb-hint">click an image to expand</div>
             <div class="source-chip">Fienup-Riordan 2000 · Sidney 1990</div>
           </div>
         </div>
@@ -135,7 +146,7 @@
             <div class="source-chip">Hallowell 1960 · Nelson 1983</div>
           </div>
           <div class="slide-text">
-            <p class="slide-lead">Hallowell's term is "world view", a framework structuring what counts as a person, a relation, and a consequence. He wants to move past "belief" and "myth."</p>
+            <p class="slide-lead">Hallowell’s “world view” framework offers a comprehensive account of Ojibwa personhood, structuring  a relational world composed of human and other-than-human beings.</p>
             <div class="anchor-quote">
               <span class="aq-mark">"</span>
               <p>No! But <em>some</em> are [alive].</p>
@@ -250,7 +261,7 @@
       </div>
     </div>
 
-  </div><!-- /slides-wrapper -->
+   </div><!-- /slides-wrapper -->
 
   <nav class="slide-nav">
     <button class="nav-btn nav-btn--prev" id="prevBtn" aria-label="Previous slide">
@@ -263,6 +274,26 @@
   </nav>
 
   <div class="slide-counter" id="slideCounter">1 / 7</div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-nav--prev" id="lightboxPrev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="lightbox-stage" id="lightboxStage">
+        <!-- image injected by JS -->
+      </div>
+      <button class="lightbox-nav lightbox-nav--next" id="lightboxNext" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none"><polyline points="9 6 15 12 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="lightbox-pips" id="lightboxPips"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

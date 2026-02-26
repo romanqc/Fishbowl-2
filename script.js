@@ -118,6 +118,107 @@
     }
   }, { passive: true });
 
+  // --- LIGHTBOX ------------------------------------------- //
+  (function () {
+    const lightbox   = document.getElementById('lightbox');
+    const backdrop   = document.getElementById('lightboxBackdrop');
+    const stage      = document.getElementById('lightboxStage');
+    const btnPrev    = document.getElementById('lightboxPrev');
+    const btnNext    = document.getElementById('lightboxNext');
+    const btnClose   = document.getElementById('lightboxClose');
+    const pipsWrap   = document.getElementById('lightboxPips');
+    const thumbGrid  = document.getElementById('thumbGrid');
+
+    if (!lightbox || !thumbGrid) return;
+
+    // Collect all thumbs and their image data
+    const thumbs = Array.from(thumbGrid.querySelectorAll('.thumb'));
+    const total  = thumbs.length;
+    let current  = 0;
+
+    // Build pip dots
+    thumbs.forEach((_, i) => {
+      const pip = document.createElement('span');
+      pip.className = 'pip' + (i === 0 ? ' active' : '');
+      pip.addEventListener('click', () => showImage(i));
+      pipsWrap.appendChild(pip);
+    });
+
+    const pips = Array.from(pipsWrap.querySelectorAll('.pip'));
+
+    function getImageData(index) {
+      const thumb = thumbs[index];
+      const img   = thumb.querySelector('img');
+      const ph    = thumb.querySelector('.image-placeholder');
+      return { img, ph };
+    }
+
+    function showImage(index) {
+      current = Math.max(0, Math.min(index, total - 1));
+      const { img, ph } = getImageData(current);
+
+      // Fade out old content
+      const existing = stage.querySelector('img, .lb-placeholder');
+      if (existing) existing.classList.add('fading');
+
+      setTimeout(() => {
+        stage.innerHTML = '';
+
+        if (img) {
+          // Clone the real image for the lightbox
+          const el = document.createElement('img');
+          el.src = img.src;
+          el.alt = img.alt || '';
+          stage.appendChild(el);
+        } else if (ph) {
+          // Show placeholder
+          const el = document.createElement('div');
+          el.className = 'lb-placeholder';
+          el.innerHTML = ph.innerHTML;
+          stage.appendChild(el);
+        }
+
+        pips.forEach((p, i) => p.classList.toggle('active', i === current));
+        btnPrev.disabled = current === 0;
+        btnNext.disabled = current === total - 1;
+      }, existing ? 150 : 0);
+    }
+
+    function openLightbox(index) {
+      showImage(index);
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Open on thumb click
+    thumbs.forEach((thumb, i) => {
+      thumb.addEventListener('click', () => openLightbox(i));
+    });
+
+    // Nav buttons
+    btnPrev.addEventListener('click', (e) => { e.stopPropagation(); showImage(current - 1); });
+    btnNext.addEventListener('click', (e) => { e.stopPropagation(); showImage(current + 1); });
+
+    // Close
+    btnClose.addEventListener('click', closeLightbox);
+    backdrop.addEventListener('click', closeLightbox);
+
+    // Keyboard nav inside lightbox
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowRight')  { e.stopPropagation(); showImage(current + 1); }
+      if (e.key === 'ArrowLeft')   { e.stopPropagation(); showImage(current - 1); }
+    }, true); // capture phase so it intercepts before slide nav
+  })();
+
   // --- INITIAL STATE -------------------------------------- //
   updateUI();
 
