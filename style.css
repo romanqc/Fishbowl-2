@@ -453,6 +453,127 @@ html, body {
   font-weight: 500;
 }
 
+/* --- ANCHOR QUOTE ----------------------------------------- */
+.anchor-quote {
+  position: relative;
+  padding: 0.9rem 1rem 0.9rem 2rem;
+  margin: 1rem 0;
+  border-left: 1px solid rgba(201,146,58,0.35);
+}
+.aq-mark {
+  position: absolute;
+  top: -0.2rem; left: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--ochre);
+  opacity: 0.35;
+  line-height: 1;
+}
+.anchor-quote p {
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.55;
+  margin-bottom: 0.4rem;
+}
+.anchor-quote cite {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--ochre);
+  opacity: 0.6;
+  font-style: normal;
+}
+
+/* --- DISCUSSION BOX --------------------------------------- */
+.discussion-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: rgba(201,146,58,0.05);
+  border: 1px solid rgba(201,146,58,0.22);
+  border-left: 2px solid rgba(201,146,58,0.6);
+}
+.discussion-box--wide { margin-top: 1.2rem; }
+.disc-label {
+  font-size: 0.57rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  opacity: 0.75;
+  margin-bottom: 0.45rem;
+}
+.discussion-box p {
+  font-size: clamp(0.78rem, 1.15vw, 0.88rem);
+  color: var(--cream-dim);
+  line-height: 1.65;
+}
+
+/* --- TENSION LAYOUT --------------------------------------- */
+.slide-body.tension-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.tension-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+.tension-card {
+  padding: 0.9rem 1rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(201,146,58,0.15);
+  border-top: 2px solid rgba(201,146,58,0.4);
+}
+.tc-texts {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  opacity: 0.6;
+  margin-bottom: 0.45rem;
+}
+.tension-card p {
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  line-height: 1.6;
+}
+
+/* --- HARD QUESTIONS --------------------------------------- */
+.centered-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.hard-qs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.hq {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.75rem 1rem;
+  border-left: 1px solid rgba(201,146,58,0.2);
+}
+.hq-num {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ochre);
+  opacity: 0.55;
+  flex-shrink: 0;
+  width: 1rem;
+  line-height: 1.6;
+}
+.hq p {
+  font-size: clamp(0.78rem, 1.1vw, 0.88rem);
+  color: var(--cream-dim);
+  line-height: 1.65;
+}
+
 /* --- NAVIGATION ------------------------------------------- */
 .slide-nav {
   position: fixed;
